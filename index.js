@@ -10,21 +10,11 @@ require("dotenv").config({
 const app = express();
 
 // CONFIGURE CORS
-const whiteList = [
-  "https://limitless-crag-81698.herokuapp.com/",
-  "http://localhost:4000/",
-];
-const corsOptions = {
-  origin: (origin, callback) => {
-    const existe = whiteList.some((dominio) => dominio === origin);
-    if (existe) {
-      callback(null, true);
-    } else {
-      callback(new Error("No permitido por CORS"));
-    }
-  },
-};
-app.use(cors(corsOptions));
+ corsOptions = {
+  origin: "https://limitless-crag-81698.herokuapp.com/",
+  optionsSuccessStatus: 200,
+  
+ };
 moongose.connect(
   process.env.BBDD,
 
