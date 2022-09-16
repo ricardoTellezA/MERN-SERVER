@@ -49,7 +49,20 @@ async function loginUser(input) {
   };
 }
 
+// TRAER INFORMACION DEL USUARIO
+
+async function getUser(id) {
+  const usuario = await User.findOne({ _id: id });
+
+  const { name, email } = usuario;
+
+  return {
+    name,
+    email,
+  };
+}
 module.exports = {
   createUser,
   loginUser,
+  getUser,
 };

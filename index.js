@@ -10,11 +10,11 @@ require("dotenv").config({
 const app = express();
 
 // CONFIGURE CORS
- corsOptions = {
-  origin: "https://limitless-crag-81698.herokuapp.com/",
-  optionsSuccessStatus: 200,
+//  corsOptions = {
+//   origin: "https://limitless-crag-81698.herokuapp.com/",
+//   optionsSuccessStatus: 200,
   
- };
+//  };
 moongose.connect(
   process.env.BBDD,
 
@@ -37,6 +37,9 @@ function server() {
   const serverApollor = new ApolloServer({
     typeDefs,
     resolvers,
+    // context: ({req}) => {
+    //   console.log(req.headers);
+    // }
   });
 
   serverApollor.listen().then(({ url }) => {
