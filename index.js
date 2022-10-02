@@ -1,7 +1,7 @@
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./gql/schema");
 const resolvers = require("./gql/resolvers");
-const conectarDB = require("./config/db");
+const conectarDB = require("./config/DB");
 require("dotenv").config({
   path: ".env",
 });
