@@ -25,7 +25,6 @@ async function deleteHomeWork(id) {
 async function changeStatus(input) {
   const homeWork = await HomeWork.findById(input.id);
   homeWork.status = input.status;
-  console.log(homeWork);
   const result = await homeWork.save();
   return result;
 }

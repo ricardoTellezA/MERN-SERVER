@@ -1,5 +1,15 @@
-const { createUser, loginUser, getUser } = require("../controllers/userControllers");
-const { createHomeWork, getHomework, deleteHomeWork, changeStatus, updateHomework } = require("../controllers/homeWorkController");
+const {
+  createUser,
+  loginUser,
+  getUser,
+} = require("../controllers/userControllers");
+const {
+  createHomeWork,
+  getHomework,
+  deleteHomeWork,
+  changeStatus,
+  updateHomework,
+} = require("../controllers/homeWorkController");
 
 const resolvers = {
   Query: {
