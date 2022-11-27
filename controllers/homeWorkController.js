@@ -1,7 +1,6 @@
 const HomeWork = require("../models/HomeWork");
 
 async function createHomeWork(input, ctx) {
-  console.log(input);
   const newHomeWork = new HomeWork(input);
   newHomeWork.idUser = input.idUser;
   const result = await newHomeWork.save();
